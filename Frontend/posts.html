@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>posts page</title>
+</head>
+<body>
+        <div id="postcontainer">
+            <div id="postsub">
+                <form id="addpost">
+                    <h1>App new post here</h1>
+                    <input type="text" id="adtitle" placeholder="Enter title">
+                    <input type="text" id="adbody" placeholder="Enter body">
+                    <select id="addevice">
+                        <option value="">device</option>
+                        <option value="laptop">laptop</option>
+                        <option value="tablet">tablet</option>
+                        <option value="mobile">mobile</option>
+                    </select>
+                    <input type="number" id="adcomments" placeholder="Enter no of comments">
+                    <input type="submit" id="adsubmit" value="add post">
+                </form>
+
+                <form id="updatepost">
+                    <h1>Update your post here</h1>
+                    <input type="text" id="title" placeholder="Enter title">
+                    <input type="text" id="body" placeholder="Enter body">
+                    <select id="device">
+                        <option value="">device</option>
+                        <option value="laptop">laptop</option>
+                        <option value="tablet">tablet</option>
+                        <option value="mobile">mobile</option>
+                    </select>
+                    <input type="number" id="comments" placeholder="Enter no of comments">
+                    <input type="submit" id="submit" value="add post">
+                </form>
+            </div>
+            <div id="postcart">
+                <h1>Your posts are here</h1>
+                <div id="container"></div>
+            </div>
+        </div>
+</body>
+</html>

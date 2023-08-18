@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        #navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <h3> LinkedIn clone</h3>
+        <a href="register.html">Register</a>
+        <a href="login.html">login</a>
+        <a href="posts.html">Your posts</a>
+</nav>
+    <h1>Login page</h1>
+
+    <form id="container">
+        <input type="text" id="email", placeholder="Enter your email">
+        <input type="text" id="password", placeholder="Enter your password">
+        <input type="submit" id="submit"value= "Login">
+    </form>
+</body>
+</html>
+<script>
+    let form = document.getElementById("container")
+
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        let payload = {
+            email : document.getElementById("email").value,
+            password : document.getElementById("password").value,
+        }
+
+        fetch("http://localhost:5555/users/login",{
+            method:"POST",
+            headers:{
+                "content-type" : "application/json"
+            },
+            body:JSON.stringify(payload)
+        })
+        .then(res=>res.json())
+        .then((res)=>{
+            console.log(res)
+            alert("You yave successfuly logged in")
+            window.location.href = "posts.html"
+        })
+        .catch(err=>console.log(err))
+    })
+</script>
