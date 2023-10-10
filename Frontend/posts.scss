@@ -658,7 +658,159 @@ footer {
       padding-bottom: 5px;
     }
   }
-  
+
+
+#logo {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#menu-icon{
+    font-size: 35px;
+    color: $navdiv-text-color;
+    z-index: 4;
+    cursor: pointer;
+    margin-top: 10px;
+    display: none;
+}
+
+#navdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    margin-right: 60px;
+    text-decoration: none;
+    text-align: left;
+    font: normal normal 600 19px/26px Segoe UI;
+    letter-spacing: 0px;
+    color: $navdiv-text-color;
+  }
+
+  hr {
+    margin-top: 16px;
+    border: 1px solid $navdiv-hr-border-color;
+  }
+}
+
+
+
+#section5 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h4 {
+    text-align: left;
+    font: normal normal bold 35px/47px Segoe UI;
+    letter-spacing: 0px;
+    color: $navdiv-text-color;
+    opacity: 1;
+    margin-top: 130px;
+  }
+
+  #sec5div1 {
+    width: 90%;
+    height: 360px;
+    background: #F8FAFC 0% 0% no-repeat padding-box;
+    box-shadow: $sec5div1-box-shadow;
+    border-radius: 42px;
+    opacity: 1;
+
+    #sec5div1_sub {
+      display: flex;
+      justify-content: space-evenly;
+      width: 30%;
+      margin-top: 40px;
+      margin-left: 40px;
+
+      img {
+        width: 20%;
+      }
+
+      p {
+        font: normal normal bold 18px/24px  Segoe UI;
+      }
+    }
+  }
+
+  #sec5div2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background: none;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+
+    .card {
+      background: $card-background 0% 0% no-repeat padding-box;
+      box-shadow: $card-box-shadow;
+      border-radius: 30px;
+      opacity: 1;
+      margin-right: 25px;
+      padding: $card-padding;
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        p {
+          text-align: left;
+          font: normal normal normal 13px/18px Segoe UI;
+          letter-spacing: 0;
+          color: $navdiv-text-color;
+          opacity: 1;
+        }
+      }
+
+      .carddiv2 {
+        width: 40%;
+        text-align: right;
+
+        img {
+          width: 15%;
+        }
+      }
+
+      .carddiv1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+          margin-right: 10px;
+        }
+
+        p {
+          text-align: left;
+          font: normal normal 600 13px/18px Segoe UI;
+          letter-spacing: 0;
+          color: $navdiv-text-color;
+          width: 150%;
+
+          &:nth-child(2) {
+            color: $carddiv1-p2-color;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 600px) {
     .shapedividers_com-5691::before {
